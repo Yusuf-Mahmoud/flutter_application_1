@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/home_screen.dart';
+import 'package:flutter_application_1/taps/hadeth/hadeth_detalis_screen.dart';
 import 'package:flutter_application_1/taps/quran/sura_detalis_screen.dart';
 import 'package:flutter_application_1/theme.dart';
 
@@ -16,7 +17,8 @@ class MyApp extends StatelessWidget {
       themeMode: ThemeMode.light,
       debugShowCheckedModeBanner: false,
       routes: {HomeScreen.routeName: (context) => HomeScreen(),
-      SuraDetailsScreen.routeName: (context) => SuraDetailsScreen()},
+      SuraDetailsScreen.routeName: (context) => SuraDetailsScreen()
+      ,HadithDetalisScreen.routeName: (context) => HadithDetalisScreen()},
       initialRoute: HomeScreen.routeName,
     );
   }

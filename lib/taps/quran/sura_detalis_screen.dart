@@ -45,7 +45,9 @@ class _SuraDetailsScreenState extends State<SuraDetailsScreen> {
             itemBuilder: (context, index) => Text(ayat[index]),
             itemCount: ayat.length,
           ),
-        ));
+          
+        )
+        );
   }
 
   Future<void> loadSurafile(int index) async {

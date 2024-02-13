@@ -1,9 +1,20 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
+import 'package:flutter_application_1/taps/hadeth/hadeth_data.dart';
 
-class HadithTab extends StatelessWidget {
-  List<String> suraName = [];
+class HadithTab extends StatefulWidget {
+  @override
+  State<HadithTab> createState() => _HadithTabState();
+}
+
+class _HadithTabState extends State<HadithTab> {
+  List<Hadeth> ahadethString = [];
+
+
   @override
   Widget build(BuildContext context) {
+       LoadAhadethFile();   
+
     return Column(
       children: [
         Image.asset(
@@ -19,12 +30,12 @@ class HadithTab extends StatelessWidget {
                 // );
               },
               child: Text(
-                suraName[index],
+                'الحديث رقم ${index + 1}',
                 style: Theme.of(context).textTheme.headline6,
                 textAlign: TextAlign.center,
               ),
             ),
-            itemCount: suraName.length,
+            itemCount: 50,
             separatorBuilder: (context, index) => Divider(),
           ),
         ),
@@ -32,4 +43,11 @@ class HadithTab extends StatelessWidget {
     );
   }
 }
-//dsdgfhf
+
+Future<void> LoadAhadethFile() async {
+   String ahadethFileContent = await rootBundle.loadString('assets/files/ahadeth.txt');
+  List<String>ahadethString =ahadethFileContent.split('#') ;
+  ahadethString.map((hadethString) => Hadeth(title: hadethString.split('\n')[0], content: hadethString.split('\n')[1]
+  ));}
+
+

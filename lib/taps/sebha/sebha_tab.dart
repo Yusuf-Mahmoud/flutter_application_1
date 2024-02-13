@@ -18,11 +18,12 @@ class _TasbeehWidgetState extends State<TasbeehWidget> {
       if (tasbeehCount == 66) {
         buttonText = "الله أكبر";
       }
-      if(tasbeehCount==99){
-        buttonText = " لَا إِلَهَ إِلَّا اللهُ وَحْدَهُ لَا شَرِيكَ لَهُ ، لَهُ الْمُلْكُ وَلَهُ الْحَمْدُ وَهُوَ عَلَى كُلِّ شَيْءٍ قَدِير";
-
-      }else if(tasbeehCount==100){
-        tasbeehCount=0;
+      if (tasbeehCount == 99) {
+        buttonText =
+            " لَا إِلَهَ إِلَّا اللهُ وَحْدَهُ لَا شَرِيكَ لَهُ ، لَهُ الْمُلْكُ وَلَهُ الْحَمْدُ وَهُوَ عَلَى كُلِّ شَيْءٍ قَدِير";
+      } else if (tasbeehCount == 100) {
+        tasbeehCount = 0;
+        buttonText = 'سبحان الله';
       }
     });
   }

@@ -263,7 +263,7 @@ class _QuranTabState extends State<QuranTab> {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Text(
-                      '${numberOfAyahs[index]} عدد الآيات',
+                      '${numberOfAyahs[index]} Ayahs',
                       style: TextStyle(
                         fontSize: 14,
                         color: Color(0xff242424),
@@ -285,9 +285,8 @@ class _QuranTabState extends State<QuranTab> {
             separatorBuilder: (context, index) => Divider(
               color: Color(0xffB7935F),
             ),
-          ),
-        ),
-      ],
+   
+          ),  )],
     );
   }
 }

@@ -1,6 +1,6 @@
 class Hadeth{
-  String title;
-  String content;
+ String title;
+ String content;
 
-  Hadeth({required this.title, required this.content});
+  Hadeth( this.title,  this.content);
 }

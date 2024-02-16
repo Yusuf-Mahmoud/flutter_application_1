@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_application_1/theme.dart';
 
 class SuraDetailsScreen extends StatefulWidget {
   static const String routeName = 'sura_details';
@@ -41,17 +42,23 @@ class _SuraDetailsScreenState extends State<SuraDetailsScreen> {
             ),
             title: Text(args.suraName),
           ),
-          body: ListView.builder(
+          
+          body: Container(decoration: BoxDecoration(color: AppTheme.white, borderRadius: BorderRadius.circular(25),),
+          margin: EdgeInsets.symmetric(vertical: MediaQuery.of(context).size.height * 0.05, horizontal: MediaQuery.of(context).size.width * 0.05),
+            padding: const EdgeInsets.all(20  
+          ),
+          child:
+          ListView.builder(
             itemBuilder: (context, index) => Text(ayat[index]),
             itemCount: ayat.length,
           ),
           
         )
+        )
         );
   }
 
   Future<void> loadSurafile(int index) async {
-    //read file logic  assets/files/2 + .txt
     String sura = await rootBundle.loadString('assets/files/${index + 1}.txt');
     ayat = sura.split('\n');
     print(ayat.length);

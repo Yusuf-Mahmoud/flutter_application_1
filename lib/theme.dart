@@ -22,8 +22,11 @@ class AppTheme {
       ),
     ),
     textTheme: TextTheme(
-      headlineSmall:
-          TextStyle(fontSize: 20, fontWeight: FontWeight.w400, color: black,),
+      headlineSmall: TextStyle(
+        fontSize: 20,
+        fontWeight: FontWeight.w400,
+        color: black,
+      ),
     ),
   );
   static ThemeData darkTheme = ThemeData(
